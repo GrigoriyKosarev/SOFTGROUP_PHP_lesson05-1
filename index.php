@@ -4,9 +4,6 @@
 <html>
 
     <head>
-        <meta charset="UTF-8">
-        <!--<link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">-->
         <title>Домашнє завданя 5 (калькулятор)</title>
     </head>
 
@@ -37,7 +34,12 @@
             echo $number1 * $number2;
         }
         elseif ($operation == "/"){
-            echo $number1 / $number2;
+            if (!$number2 == 0){
+                echo $number1 / $number2;
+            }
+            else{
+                echo "Помилка! Ділення на 0.";
+            }
         }
         else{
             echo "Не вірний формат введеної операції";
@@ -56,6 +58,7 @@
             echo "Не заповнені вхідні дані";
         }
     }
+
 ?>
 
     </body>
